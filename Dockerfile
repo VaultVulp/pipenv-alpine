@@ -4,7 +4,7 @@ FROM python:3.6-alpine
 MAINTAINER vaultvulp
 
 RUN apk update \
-        && apk add --no-cache openssh-client \
+        && apk add --no-cache git openssh-client \
         && pip install pipenv \
         && addgroup -S -g 1001 app \
         && adduser -S -D -h /app -u 1001 -G app app
