@@ -19,3 +19,4 @@ RUN chown -R app.app /app/
 USER app
 
 ENTRYPOINT ["/bin/sh"]
+CMD [""]
