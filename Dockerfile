@@ -17,6 +17,3 @@ RUN chown -R app.app /app/
 
 # Creating environment
 USER app
-
-ENTRYPOINT ["/bin/sh"]
-CMD [""]
