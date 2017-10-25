@@ -26,4 +26,4 @@ RUN export ENV_PATH=$(pipenv --venv) && \
     echo 'python "$@"' >> /app/entrypoint.sh && \
     chmod +x /app/entrypoint.sh
 
-ENTRYPOINT ["/bin/sh"]
+ENTRYPOINT ["/app/entrypoint.sh"]
