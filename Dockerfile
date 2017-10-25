@@ -17,13 +17,5 @@ RUN chown -R app.app /app/
 
 # Creating environment
 USER app
-RUN pipenv --three
 
-# Setting up entrypoint
-RUN export ENV_PATH=$(pipenv --venv) && \
-    echo '#!/bin/sh' >> /app/entrypoint.sh && \
-    echo "source $ENV_PATH/bin/activate" >> /app/entrypoint.sh && \
-    echo 'python "$@"' >> /app/entrypoint.sh && \
-    chmod +x /app/entrypoint.sh
-
-ENTRYPOINT ["/app/entrypoint.sh"]
+ENTRYPOINT ["/bin/sh"]
